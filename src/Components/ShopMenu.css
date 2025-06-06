@@ -444,54 +444,77 @@
     font-size: 0.9rem;
   }
   
-  /* Mobile-friendly layout for other categories (fixed-columns) */
-  .price-table.fixed-columns {
-    display: block;
-  }
-  
-  .price-table.fixed-columns .price-header {
-    display: none;
-  }
-  
-  .price-table.fixed-columns .price-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: white;
-    border-radius: 10px;
-    padding: 1rem 1.25rem;
-    margin-bottom: 0.75rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    border: 1px solid #e2e8f0;
-    transition: all 0.2s ease;
-  }
-  
-  .price-table.fixed-columns .price-row:hover {
-    transform: translateX(5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border-color: #4299e1;
-  }
-  
-  .price-table.fixed-columns .price-name {
-    flex: 1;
-    font-weight: 600;
-    color: #2d3748;
-    font-size: 0.95rem;
-    line-height: 1.3;
-    border: none;
-    padding: 0;
-  }
-  
-  .price-table.fixed-columns .price-qty {
-    font-weight: 700;
-    color: #38a169;
-    font-size: 1.1rem;
-    background: #e6fffa;
-    padding: 0.5rem 0.75rem;
-    border-radius: 6px;
-    border: 1px solid #38a169;
-    margin-left: 1rem;
-  }
+  /* Mobile-friendly table layout for Ice Cream/Liquid Sweet */
+.price-table.grid-layout {
+  display: block;
+}
+
+.price-table.grid-layout .price-header {
+  display: none;
+}
+
+.price-table.grid-layout .price-row {
+  display: block;
+  margin-bottom: 1rem;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+}
+
+.price-table.grid-layout .price-name {
+  display: block;
+  background: linear-gradient(135deg, #4299e1, #3182ce);
+  color: white;
+  border: none;
+  text-align: center;
+  font-weight: 700;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.price-table.grid-layout .price-qty {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: calc(33.33% - 0.5rem);
+  height: 60px; /* Increased height to accommodate quantity label */
+  margin: 0.25rem;
+  text-align: center;
+  background: #e6fffa;
+  border: 2px solid #38a169;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  position: relative;
+}
+
+/* Add quantity labels using CSS content */
+.price-table.grid-layout .price-qty:nth-child(2)::before {
+  content: "100ml";
+  font-size: 0.75rem;
+  color: #4a5568;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.price-table.grid-layout .price-qty:nth-child(3)::before {
+  content: "500ml";
+  font-size: 0.75rem;
+  color: #4a5568;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.price-table.grid-layout .price-qty:nth-child(4)::before {
+  content: "1L";
+  font-size: 0.75rem;
+  color: #4a5568;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
   
   /* Mobile card improvements */
   .card {
