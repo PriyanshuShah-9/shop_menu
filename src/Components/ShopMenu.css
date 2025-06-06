@@ -7,7 +7,7 @@
   margin: 0 auto;
   padding: 2rem 1rem;
   font-family: 'Inter', 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #ef9001 0%, #633501 100%);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   min-height: 100vh;
 }
 
@@ -399,16 +399,16 @@
     padding: 0.75rem;
   }
   
-  /* Mobile-friendly table layout */
+  /* Mobile-friendly table layout for Ice Cream/Liquid Sweet */
   .price-table.grid-layout {
     display: block;
   }
   
-  .price-header {
+  .price-table.grid-layout .price-header {
     display: none;
   }
   
-  .price-row {
+  .price-table.grid-layout .price-row {
     display: block;
     margin-bottom: 1rem;
     background: white;
@@ -418,7 +418,7 @@
     border: 1px solid #e2e8f0;
   }
   
-  .price-name {
+  .price-table.grid-layout .price-name {
     display: block;
     background: linear-gradient(135deg, #4299e1, #3182ce);
     color: white;
@@ -429,7 +429,7 @@
     margin-bottom: 0.5rem;
   }
   
-  .price-qty {
+  .price-table.grid-layout .price-qty {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -442,6 +442,55 @@
     border-radius: 8px;
     font-weight: 600;
     font-size: 0.9rem;
+  }
+  
+  /* Mobile-friendly layout for other categories (fixed-columns) */
+  .price-table.fixed-columns {
+    display: block;
+  }
+  
+  .price-table.fixed-columns .price-header {
+    display: none;
+  }
+  
+  .price-table.fixed-columns .price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+  }
+  
+  .price-table.fixed-columns .price-row:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-color: #4299e1;
+  }
+  
+  .price-table.fixed-columns .price-name {
+    flex: 1;
+    font-weight: 600;
+    color: #2d3748;
+    font-size: 0.95rem;
+    line-height: 1.3;
+    border: none;
+    padding: 0;
+  }
+  
+  .price-table.fixed-columns .price-qty {
+    font-weight: 700;
+    color: #38a169;
+    font-size: 1.1rem;
+    background: #e6fffa;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    border: 1px solid #38a169;
+    margin-left: 1rem;
   }
   
   /* Mobile card improvements */
